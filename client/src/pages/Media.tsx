@@ -5,6 +5,46 @@ import { useState, useRef } from 'react';
 
 const magazines = [
     {
+        id: 9,
+        title: "Suryojasvi Times - Jun 2026",
+        cover: "/magazine/Jun-26 cover.png",
+        description: "Volume 25 - Discover the latest news and updates from June.",
+        link: "/magazine/Jun-26.pdf",
+        year: 2026
+    },
+    {
+        id: 8,
+        title: "Suryojasvi Times - May 2026",
+        cover: "/magazine/May-26 cover.png",
+        description: "Volume 24 - Highlights and achievements from May.",
+        link: "/magazine/May-26.pdf",
+        year: 2026
+    },
+    {
+        id: 7,
+        title: "Suryojasvi Times - Apr 2026",
+        cover: "/magazine/Apr-26 cover.png",
+        description: "Volume 23 - Catch up on all the news from April.",
+        link: "/magazine/Apr-26.pdf",
+        year: 2026
+    },
+    {
+        id: 6,
+        title: "Suryojasvi Times - Mar 2026",
+        cover: "/magazine/Mar-26 cover.png",
+        description: "Volume 22 - March into success with our latest edition.",
+        link: "/magazine/Mar-26.pdf",
+        year: 2026
+    },
+    {
+        id: 5,
+        title: "Suryojasvi Times - Feb 2026",
+        cover: "/magazine/Feb-26Cover.png",
+        description: "Volume 21 - Dive into our updates from February 2026.",
+        link: "/magazine/Feb-26.pdf",
+        year: 2026
+    },
+    {
         id: 4,
         title: "Suryojasvi Times - Jan 2026",
         cover: "/magazine/jan-2026-cover.png",
