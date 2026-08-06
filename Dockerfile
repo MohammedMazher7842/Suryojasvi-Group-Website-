@@ -31,12 +31,17 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# server/index.ts is bundled with --packages=external, so its only
-# runtime dependency (express) must exist in the image. Installing just
-# express keeps the runtime image small instead of pulling the whole
-# React/Radix dependency tree that is already baked into dist/public.
-COPY package.json ./
-RUN npm install --omit=dev --no-package-lock --no-audit --no-fund express@^4.21.2 \
+# server/index.ts is bundled with --packages=external, so its only runtime
+# dependency (express) must exist in the image. We write a minimal manifest
+# instead of copying the project's package.json: copying the real one makes
+# npm resolve the full dev tree (vite 7 vs @builder.io/vite-plugin-jsx-loc
+# peer conflict -> ERESOLVE), and it drags the React/Radix tree into a stage
+# that only serves the already-built dist/public.
+# "type": "module" is required — dist/index.js is an ESM bundle.
+RUN printf '%s' \
+    '{"name":"suryojasvi-group-web","private":true,"type":"module","dependencies":{"express":"^4.21.2"}}' \
+    > package.json \
+    && npm install --omit=dev --no-audit --no-fund \
     && npm cache clean --force
 
 COPY --from=builder /app/dist ./dist
