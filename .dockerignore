@@ -1,0 +1,44 @@
+# VCS / CI
+.git
+.gitignore
+.github
+Jenkinsfile
+
+# Dependencies & build output (rebuilt inside the image)
+node_modules
+**/node_modules
+dist
+build
+.pnpm-store
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Raw source assets — originals kept in the repo for editing only.
+# Everything the site actually serves lives in client/public/.
+Awards and Recognitions/
+Culture/
+Directors/
+Experiences/
+Logo/
+logos/
+Magazine/
+
+# Local / editor / OS noise
+.manus-logs
+.vscode
+.idea
+*.swp
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Docs & scratch
+ideas.md
+images_list.txt
+.env
+.env.*
+!.env.example
