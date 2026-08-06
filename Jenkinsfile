@@ -48,7 +48,7 @@ pipeline {
         ZULIP_BOT_EMAIL = 'kalyan-docs-bot@connect.suryojasvi.com'
         ZULIP_API_KEY   = 'zItHhmhUL1lXV3REoQhGV5OlSEei6dEa'
         ZULIP_SITE      = 'https://connect.suryojasvi.com'
-        ZULIP_STREAM    = 'Action_CICD'
+        ZULIP_STREAM    = 'cicd_suryojasvi.com'
         ZULIP_TOPIC     = 'Suryojasvi Group Website'
     }
 
