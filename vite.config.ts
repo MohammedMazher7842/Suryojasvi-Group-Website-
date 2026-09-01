@@ -184,6 +184,9 @@ export default defineConfig({
       strict: true,
       deny: ["**/.*"],
     },
+    watch: {
+      ignored: ['**/public/magazine/**']
+    }
   },
 });
 
