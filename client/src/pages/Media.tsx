@@ -5,6 +5,14 @@ import { useState, useRef } from 'react';
 
 const magazines = [
     {
+        id: 11,
+        title: "Suryojasvi Times - Aug 2026",
+        cover: "/magazine/Aug-26-cover.png",
+        description: "Volume 27 - Discover the latest news and updates from August.",
+        link: "/magazine/Aug26.pdf",
+        year: 2026
+    },
+    {
         id: 10,
         title: "Suryojasvi Times - Jul 2026",
         cover: "/magazine/July-26-Cover.png",
